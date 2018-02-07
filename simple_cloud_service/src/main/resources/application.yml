@@ -1,0 +1,39 @@
+spring:
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+      
+  jpa:
+    show-sql: true
+    generate-ddl: false
+    properties:
+      hibernate:
+        format_sql: true      
+    hibernate:
+      ddl-auto: none
+      
+  datasource:
+    platform: mysql
+    schema:
+    - classpath:schema.sql
+    data:
+    - classpath:data.sql
+    url: jdbc:mysql://192.168.0.88:3306/cloud_study?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: root
+    
+server:
+  port: 9099
+  
+logging:
+  level:
+    root: info
+    com.genpact.cloud: debug
+    # 下面的三行打印sql中的参数
+    org.hibernate: info
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+    org.hibernate.type.descriptor.sql.BasicExtractor: trace
+    
+    
+  
