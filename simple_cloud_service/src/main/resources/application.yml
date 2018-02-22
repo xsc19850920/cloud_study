@@ -19,9 +19,12 @@ spring:
     - classpath:schema.sql
     data:
     - classpath:data.sql
-    url: jdbc:mysql://192.168.0.88:3306/cloud_study?useUnicode=true&characterEncoding=UTF-8&useSSL=false
-    username: root
-    password: root
+    url: jdbc:mysql://58.2.221.69:3306/a710009498?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: a710009498
+    password: a710009498
+#    url: jdbc:mysql://192.168.0.88:3306/cloud_study?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+#    username: root
+#    password: root
     
 server:
   port: 9099

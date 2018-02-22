@@ -1,4 +1,4 @@
-drop table `simple_user`;
+DROP TABLE IF EXISTS `simple_user`;
 CREATE TABLE `simple_user` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `age` int(11) DEFAULT NULL,
