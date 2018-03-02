@@ -8,6 +8,7 @@ import java.util.Date;
 import org.apache.commons.lang3.time.DateUtils;
 
 
+
 public class SimpleUser implements Serializable{
 	private static final long serialVersionUID = 1L;
 
