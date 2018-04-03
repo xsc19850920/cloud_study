@@ -19,6 +19,9 @@
 		<module>simple_cloud_service_client</module>
 		<module>eureka_server_single</module>
 		<module>eureka_service_provider_single</module>
+		<module>eureka_server_v1</module>
+		<module>movie_v1</module>
+		<module>user_v1</module>
 	</modules>
 
 	<parent>

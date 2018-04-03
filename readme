@@ -1,0 +1,10 @@
+1 simple_cloud_* 是没用eureka的普通位服务的例子
+2 eureka_server_single,eureka_service_provider_single 服务，服务提供发现
+
+3 *-v1 是针对eureka的服务注册和负载均衡（默认的附载均衡是轮循） 
+  注意点 在使用虚拟ip（String result = restTemplate.getForObject("http://USER-V1/user/"+id, String.class);） 其中USER-V1 
+      不能用_ 
+   resttemplate 必须加	@LoadBalanced 这个注解
+  否则调用会报错
+  
+  
