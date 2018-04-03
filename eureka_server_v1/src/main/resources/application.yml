@@ -1,0 +1,16 @@
+server:
+  port: 8761
+#设置服务的安全 用户名密码
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin  # 这里的用户名和密码应该和下面的defaultZone里面的保持一致
+    password: admin
+eureka:
+  client:
+    service-url:
+      defaultZone : http://admin:admin@localhost:8761/eureka
+    fetch-registry: false
+    register-with-eureka: false
+    
