@@ -22,6 +22,7 @@
 		<module>eureka_server_v1</module>
 		<module>movie_v1</module>
 		<module>user_v1</module>
+		<module>movie_ribbon_v1</module>
 	</modules>
 
 	<parent>

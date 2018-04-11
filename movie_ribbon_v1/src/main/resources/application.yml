@@ -1,0 +1,11 @@
+server:
+  port: 7901
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:admin@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+spring:
+  application:
+    name: movie-v1
