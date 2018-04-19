@@ -7,3 +7,9 @@
   否则调用会报错
   
   
+4. 测试ribbon 默认的负载均衡是轮训 启动顺序是 eureka_server_v1 -〉 movie_v1 -〉user_v1 ——〉user_v1 （改端口） 
+
+5.测试ribbon 自定义负载均衡规则 启动顺序是 eureka_server_v1 -〉 movie_ribbon_v1 -〉user_v1 ——〉user_v1 （改端口）  ——〉user-v2（user-v1 改application.name 改port） r-v2（user-v1 改application.name 改port）
+ 请求test endpoint
+  
+  
