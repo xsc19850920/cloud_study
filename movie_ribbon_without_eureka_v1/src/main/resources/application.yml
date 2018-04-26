@@ -1,5 +1,5 @@
 server:
-  port: 7903
+  port: 7901
 eureka:
   client:
     service-url:
@@ -8,4 +8,12 @@ eureka:
     prefer-ip-address: true
 spring:
   application:
-    name: user-v1
+    name: movie-ribbon-without-eureka-v1
+    
+ribbon:
+  eureka:
+   enabled: false
+   
+stores:
+  ribbon:
+    listOfServers: localhost:7902

@@ -1,5 +1,5 @@
 server:
-  port: 7903
+  port: 7901
 eureka:
   client:
     service-url:
@@ -8,4 +8,8 @@ eureka:
     prefer-ip-address: true
 spring:
   application:
-    name: user-v1
+    name: movie-ribbon-property-v1
+    
+user-v1:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
