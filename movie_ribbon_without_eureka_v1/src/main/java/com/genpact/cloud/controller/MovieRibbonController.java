@@ -24,16 +24,22 @@ public class MovieRibbonController {
 	
 	@GetMapping("movie/user/{id}")
 	public String findById(@PathVariable("id") String id) {
-		String result = restTemplate.getForObject("http://USER-V1/user/"+id, String.class);
+		String result = restTemplate.getForObject("http://user-v1/user/"+id, String.class);
 		return result + " from  Movie"; 
+	}
+	
+	@GetMapping("movie/userwithouteureka/{id}")
+	public String findByIdForWithOutEureka(@PathVariable("id") String id) {
+		ServiceInstance user1 = loadBalancerClient.choose("user-v1");
+		return String.format("%s -> %s:%s" ,user1.getServiceId(),user1.getHost() ,  user1.getPort());
 	}
 	
 	@GetMapping("movie/test")
 	public String test() {
 		
-		ServiceInstance user1 = loadBalancerClient.choose("USER-V1");
+		ServiceInstance user1 = loadBalancerClient.choose("user-v1");
 		
-		ServiceInstance user2 = loadBalancerClient.choose("USER-V2");
+		ServiceInstance user2 = loadBalancerClient.choose("user-v2");
 		
 		LOG.info(String.format("%s -> %s:%s" ,user1.getServiceId(),user1.getHost() ,  user1.getPort()));
 		LOG.info(String.format("%s -> %s:%s" ,user2.getServiceId(),user2.getHost() ,  user2.getPort()));

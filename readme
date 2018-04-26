@@ -17,5 +17,4 @@
  请求test endpoint
   
  7 ribbon 脱离eureka  启动顺序是 eureka_server_v1 -〉user_v1 ——〉user_v1 （改端口）  ——〉 movie_ribbon_without_eureka_v1 
- 注意 这个时候虚拟ip user-v1，user-v2是不好用的了 
  参见文档 16.6 Example: How to Use Ribbon Without Eureka

@@ -14,6 +14,6 @@ ribbon:
   eureka:
    enabled: false
    
-stores:
+user-v1:
   ribbon:
     listOfServers: localhost:7902
